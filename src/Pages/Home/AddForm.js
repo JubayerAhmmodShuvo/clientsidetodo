@@ -10,7 +10,7 @@ const AddForm = () => {
  const [todo, setTodo] = useState([]);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    const url = `https://polar-mesa-90175.herokuapp.com/todos`;
+    const url = `https://frozen-fortress-24742.herokuapp.com/todos`;
     fetch(url, {
       method: "POST",
       headers: {

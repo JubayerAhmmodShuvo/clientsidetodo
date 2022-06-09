@@ -9,7 +9,7 @@ const ShowTodo = () => {
   const [line,setLine] = useState(false);
   
   if (user) {
-    fetch(`https://polar-mesa-90175.herokuapp.com/todos?email=${user.email}`, {
+    fetch(`https://frozen-fortress-24742.herokuapp.com/todos?email=${user.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -23,7 +23,7 @@ const ShowTodo = () => {
    const handleDeleteBtn = id => {
         const confirm = window.confirm('Want to delete this item');
         if (confirm) {
-            const url = `https://polar-mesa-90175.herokuapp.com/todos/${id}`;
+            const url = `https://frozen-fortress-24742.herokuapp.com/todos/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -39,7 +39,7 @@ const ShowTodo = () => {
         }
     }
   const strikeThrouth = id => {
-    const url = `https://polar-mesa-90175.herokuapp.com/todos/${id}`;
+    const url = `https://frozen-fortress-24742.herokuapp.com/todos/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
